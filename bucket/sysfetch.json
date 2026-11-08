@@ -1,0 +1,31 @@
+{
+    "version": "0.4.0",
+    "description": "Fast system information tool (Native AOT .NET)",
+    "homepage": "https://github.com/cprice70/sysfetch",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cprice70/sysfetch/releases/download/v0.4.0/sysfetch-0.4.0-win-x64.zip",
+            "hash": "927f2bc9b9b91f2d998a416e7c006a326cd63963b1489022c1db6d89f472bc2c"
+        },
+        "arm64": {
+            "url": "https://github.com/cprice70/sysfetch/releases/download/v0.4.0/sysfetch-0.4.0-win-arm64.zip",
+            "hash": "8deadd92de016d1654c9e02069cb6900297f698be4a8c08b562a167a35fcacf1"
+        }
+    },
+    "bin": "sysfetch.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cprice70/sysfetch/releases/download/v$version/sysfetch-$version-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/cprice70/sysfetch/releases/download/v$version/sysfetch-$version-win-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
